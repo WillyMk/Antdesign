@@ -1,0 +1,93 @@
+.form{
+    text-align: start;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    background-size: cover;
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-color: rgb(85, 128, 129);
+}
+.form h1{
+    margin-bottom: 2em;
+    text-align: center; 
+    color: #fff;
+}
+.form p{
+    margin-bottom: 8em;
+}
+.form input{
+    width: 50%;
+}
+.form Form.Item label{
+    color: #fff;
+} 
+.form label{
+    color: #fff;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 960px) {
+    .form{
+        text-align: center;
+        justify-content: center;
+    }
+    .form .input{
+        width: 100%;
+    }
+}
+
+/* layouts */
+img{
+    width: 50em;
+
+}
+
+.App{
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  text-align: center;
+  background: white;
+  border-radius: 4px;
+}
+
+/* tablelink */
+.intouch{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 4em;
+    text-align: center;
+    background-color: whitesmoke;
+    margin-top: -2em;
+}
+.wv{
+    margin-top: 2em;
+    font-size: 25px;
+    color: blue;
+}
+.intouch h3{
+    font-size: 18px;
+}
+
+#components-layout-demo-top-side-2 .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .ant-row-rtl #components-layout-demo-top-side-2 .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
