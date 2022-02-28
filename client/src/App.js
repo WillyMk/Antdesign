@@ -1,12 +1,11 @@
 import './App.css';
 import React,{useState,useEffect} from 'react';
 import Register from './components/Register';
+import Registtration from './components/Register/Register';
 import Login from './components/Login';
+import AboutPage from './components/AboutUs/AboutPage';
 import Home from './views/Home';
 import Error from './components/Error';
-import Table from './components/Table';
-import Dashboard from './components/Dashboard';
-import Form from './components/Form';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 
 import { Spin } from 'antd';
@@ -30,9 +29,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/signup" element={<Registtration/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/table" element={<Table/>}/>
-        <Route path="/form" elememt={<Form/>}/>
+        <Route path="/health" element={<AboutPage/>}/>
         <Route path="*" element={<Error/>}/>
       </Routes>
     

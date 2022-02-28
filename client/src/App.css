@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Source+Serif+4:ital@1&display=swap');
+
+body{
+    font-family: 'Playfair Display', serif;
+font-family: 'Source Serif 4', sans-serif;
+}
+.ft h1{
+    text-align: start;
+}
 .form{
     text-align: start;
     justify-content: center;
@@ -91,3 +100,4 @@ img{
   .site-layout-background {
     background: #fff;
   }
+

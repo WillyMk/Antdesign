@@ -1,0 +1,66 @@
+.head {
+  margin-top: -2em;
+  background: rgb(177, 40, 36);
+  position: relative;
+}
+.particle {
+  width: 50%;
+}
+.pts {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 4em;
+  justify-content: center;
+}
+.wv{
+  color: rgb(0, 255, 13);
+  font-size: 20px;
+}
+.type2{
+  font-size: 30px;
+}
+.type3{
+  font-size: 18px;
+  color: #fff;
+}
+.btn{
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .pts {
+    margin-left: 0em;
+    justify-content: center;
+    text-align: center;
+    grid-gap: 1em;
+  }
+  .type2{
+    font-size: 18px;
+  }
+  .type3{
+    font-size: 15px;
+  }
+}
+
+.custom-shape-divider-bottom-1645722053 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1645722053 svg {
+  position: relative;
+  display: block;
+  width: calc(169% + 1.3px);
+  height: 169px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1645722053 .shape-fill {
+  fill: #FFFFFF;
+}

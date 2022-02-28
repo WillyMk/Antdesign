@@ -1,46 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {Form,Input,Select,Checkbox,Button,} from 'antd';
 import Axios from 'axios';
 
+const BASE_URL = 'https://gorest.co.in/'
+
 const { Option } = Select;
-const formItemLayout = {labelCol: {xs: {span: 24,},sm: {span: 8,},},wrapperCol: {xs: {span: 24,},sm: {span: 16,},},};
-const tailFormItemLayout = {wrapperCol: {xs: {span: 24,offset: 0,},sm: {span: 16,offset: 8,},},};
+ const formItemLayout = {labelCol: {xs: {span: 24,},sm: {span: 8,},},wrapperCol: {xs: {span: 24,},sm: {span: 16,},},};
+ const tailFormItemLayout = {wrapperCol: {xs: {span: 24,offset: 0,},sm: {span: 16,offset: 8,},},};
 
 const Register = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    // Axios.post("https://gorest.co.in/public-api/user",values)
-    // .then((response)=>{
-    //   console.log(response);
-    // })
-    console.log(values);
+     let data = {
+      "name" :  "Naikteseerets",
+     "email" :  "naik_siddarth5trrrest5@goyette-berge.biz",
+     "gender":  "female",
+     "status"  : "active"
+     }
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer a167da9923f5af3060de33cffe5328df25b7eeb6eb0914da195782d0be4b4778',
+      'Accept':'application/json'
+    }
+    
+    Axios.post(`${BASE_URL}public/v2/users/`, data, {
+        headers: headers
+      })
+      .then((response) => {
+        console.log(response)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   };
-
-  const prefixSelector = (
-    <Form.Item name="prefix" noStyle>
-      <Select
-        style={{
-          width: 70,
-        }}
-      >
-        <Option value="86">+254</Option>
-        <Option value="87">+245</Option>
-      </Select>
-    </Form.Item>
-  );
-
   return (
-    <Form
+    <div className='fr'>
+      <h1>Registration Form</h1>
+      <Form
       {...formItemLayout}
       form={form}
       name="register"
       onFinish={onFinish}
       scrollToFirstError
+      style={{marginTop:"5em"}}
     >
-      <Form.Item
-        name="email"
-        label="E-mail"
+      <Form.Item name="email" label="E-mail" style={{width: "500px"}}
         rules={[
           {
             type: 'email',
@@ -55,9 +61,7 @@ const Register = () => {
         <Input />
       </Form.Item>
 
-      <Form.Item
-        name="password"
-        label="Password"
+      <Form.Item name="password" label="Password" style={{width: "500px"}}
         rules={[
           {
             required: true,
@@ -69,10 +73,7 @@ const Register = () => {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item
-        name="confirm"
-        label="Confirm Password"
-        dependencies={['password']}
+      <Form.Item name="confirm" label="Confirm Password" style={{width: "500px"}} dependencies={['password']}
         hasFeedback
         rules={[
           {
@@ -93,27 +94,8 @@ const Register = () => {
         <Input.Password />
       </Form.Item>
 
-      <Form.Item
-        name="phone"
-        label="Phone Number"
-        rules={[
-          {
-            required: true,
-            message: 'Please input your phone number!',
-          },
-        ]}
-      >
-        <Input
-          addonBefore={prefixSelector}
-          style={{
-            width: '100%',
-          }}
-        />
-      </Form.Item>
-
-      <Form.Item
-        name="gender"
-        label="Gender"
+      <Form.Item name="gender" label="Gender"
+        style={{width: "500px",}}
         rules={[
           {
             required: true,
@@ -129,26 +111,15 @@ const Register = () => {
       </Form.Item>
 
       <Form.Item
-        name="agreement"
-        valuePropName="checked"
-        rules={[
-          {
-            validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject(new Error('Should accept agreement')),
-          },
-        ]}
-        {...tailFormItemLayout}
+      style={{marginRight:"4em",marginTop:"2em"}}
       >
-        <Checkbox>
-          I have read the <a href="">agreement</a>
-        </Checkbox>
-      </Form.Item>
-      <Form.Item {...tailFormItemLayout}>
         <Button type="primary" htmlType="submit">
           Register
         </Button>
       </Form.Item>
     </Form>
+    </div>
+    
   );
 };
 

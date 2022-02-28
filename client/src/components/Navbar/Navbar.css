@@ -1,0 +1,189 @@
+.navbar {
+  background-color: rgb(177, 40, 36);
+  height: 13.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: 'Playfair Display', serif;
+font-family: 'Source Serif 4', sans-serif;
+}
+.navbar h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 26px;
+  color: yellow;
+}
+.navbar-logo {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  margin-left: 0em;
+  justify-self: start;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+}
+.listItem {
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  grid-gap: 1em;
+}
+.tech {
+  height: 73px;
+  object-fit: cover;
+}
+
+.fa-firstdraft {
+  margin-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.nav-menu {
+  display: flex;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 6px;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: end;
+  padding: 0;
+  margin-left: 0em;
+  font-size: 16px;
+  color: black;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding-left: 3em;
+  color: black;
+}
+.nav-itemx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding-left: 3em;
+  font-size: 19px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: goldenrod;
+}
+.nav-itemx .nav-links {
+  color: yellow;
+}
+.nav-links {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+  background-color: darkblue;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 100px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    justify-content: center;
+  }
+
+  .nav-menu.active {
+    background: #242222;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: #1888ff;
+    border-radius: 0;
+  }
+
+  .navbar-logo {
+    margin-right: 40em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+  .tech {
+    margin-right: 16em;
+  }
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 1.8em;
+  }
+  .fa-bars {
+    color: #fff;
+    font-size: 1.6em;
+    margin-top: 0.2em;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: #1888ff;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #1888ff;
+    transition: 250ms;
+  }
+}

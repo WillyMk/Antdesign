@@ -1,21 +1,24 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
-import Header from '../components/Header';
-import Tablelink from '../components/Tablelink';
-import Divider from '../components/Divider';
-import Stats from '../components/Stats';
-import Progress from '../components/Progress';
-
+import Navbar from '../components/Navbar/Navbar';
+import Header from '../components/Header/Header';
+import Uploads from '../components/Uploads/Uploads';
+import Tables from '../components/Tables';
+import Contact from '../components/Contact/Contact';
+import FormUpdate from '../components/FormUpdate';
+import Footer from '../components/Footer/Footer';
+import Bottom from '../components/Bottom/bottom';
 
 const Home = () => {
   return (
-    <div>
+    <div> 
         <Navbar/>
         <Header/>
-        <Tablelink/>
-        <Divider/>
-        <Stats/>
-        <Progress/>
+        <Uploads/>
+        <Contact/>
+        <FormUpdate/>
+        <Tables/>
+        <Footer/>
+        <Bottom/>
     </div>
   )
 }
